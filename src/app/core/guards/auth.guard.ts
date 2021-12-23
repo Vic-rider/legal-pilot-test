@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 
 export class AuthGuard implements CanActivate {
 
+  //@ts-ignore
   _token = localStorage.getItem(environment.tokenKey)
 
   constructor(private _router: Router) {}
