@@ -1,9 +1,17 @@
+
+
+h5, p, h4 {
+  margin: 0;
+  font-weight: 100;
+}
+
+
+
 .app-wrapper-web {
   position: relative;
   z-index: 100;
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 @media screen and (min-width: 1441px){
@@ -45,11 +53,13 @@
 
 .list_side {
   width: 35em;
-  background-color: rgb(66, 114, 114);
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .chat_side {
   width: 100%;
+  background-color: #dcd5cd;
 }
 
 ._3sh5K {
@@ -122,4 +132,135 @@
   background-image: url('../../../assets/img/intro-connection-light_c98cc75f2aa905314d74375a975d2cf2.jpg');
 }
 
+.head_info {
+  padding: 1em;
+  display: flex;
+  background-color: #ededed;
+  height: 40px;
+}
 
+.head_avatar {
+  display: flex;
+}
+
+.head_avatar img{
+  border-radius: 50%;
+  height: 43px;
+}
+
+.head_button {
+  margin: auto 0;
+}
+
+.head_avatar .chat_infos {
+  padding: 0;
+  margin-left: 1em;
+  border: 0;
+  margin-top: 3px;
+}
+
+.head_avatar .chat_infos small {
+  color: gray;
+}
+
+button {
+  border: none;
+  margin: 0 3px;
+  color: gray;
+}
+
+.chat_search {
+  height: 3em;
+    background-color: #f6f6f6;
+}
+
+.chat_search input{
+  width: 98%;
+  border-radius: 20px;
+  border: none;
+  padding-left: 4em;
+  height: 73%;
+  background-color: #fff;
+  margin: 5px;
+}
+
+.chat_list {
+  background-color: #fff;
+}
+
+.chat_search input {
+  background-image: url('../../../assets/img/icons8-search.svg');
+  background-repeat: no-repeat;
+  background-position: 12px;
+}
+
+.chat {
+  padding: 1em;
+  display: flex;
+}
+
+.chat_pic img{
+  height: 50px;
+  border-radius: 50%;
+}
+
+.chat_infos {
+  width: 100%;
+  padding-left: 8px;
+  border-bottom: 1px solid gray;
+}
+
+.chat_infos .title, .chat_infos .some_details{
+  display: flex;
+  margin-top: 3px;
+}
+
+.chat_content{
+  height: 54em;
+  background-color: #dcd5cd;
+  background-image: url('../../../assets/img/bg-chat.png');
+  opacity: 0.1;
+}
+
+.type_message_content, .emoticon_file_btn , .send_button{
+  display: flex;
+}
+
+.some_details .msg_datas {
+  padding: 1px 7px;
+  background-color: #06d755;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.send_button {
+  margin-left: 9px;
+}
+
+.type_message_content {
+  position: absolute;
+  bottom: 0em;
+  width: 100%;
+  height: 50px;
+}
+
+.type_message_content input {
+  width: 81%;
+  height: 37px;
+  border-radius: 2em;
+  padding-left: 1em;
+  margin: auto 0;
+  border: 0;
+}
+
+.emoticon_file_btn .file {
+  transform: rotate(45deg);
+}
+
+.type_message_content button {
+  border: 0;
+}
+
+// ::-webkit-scrollbar {
+//   width: 8px;
+// }

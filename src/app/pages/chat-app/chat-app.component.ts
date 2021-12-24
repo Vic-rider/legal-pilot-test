@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatAppComponent implements OnInit {
 
+  chat = false
+
   constructor() { }
 
   ngOnInit() {
+    this.chat = true
   }
 
 }

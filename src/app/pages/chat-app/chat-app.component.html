@@ -3,14 +3,195 @@
   <div class="content_wrapper">
 
     <div class="list_side">
-      side
+
+      <div class="head_info">
+        <div class="head_avatar">
+          <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+        </div>
+        <div class="spacer"></div>
+        <div class="head_button">
+          <button title="Status">
+            <mat-icon>donut_large</mat-icon>
+          </button>
+          <button title="New Chat">
+            <mat-icon>chat</mat-icon>
+          </button>
+          <button title="Menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="chat_search">
+        <input type="search" placeholder="Search or start new chat">
+      </div>
+
+      <div class="chat_list">
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Communauté Music</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">25</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Communauté Music</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">25</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Communauté Music</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">25</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Communauté Music</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">25</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Communauté Music</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">25</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Communauté Music</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">25</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Communauté Music</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">25</small>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
 
     <div class="chat_side">
 
       <div class="ldL67 _3sh5K">
 
-        <div class="zaKsw">
+        <div *ngIf="!chat" class="zaKsw">
+
           <div class="_1RAKT">
             <div class="_2JIth" data-asset-intro-image-light="true" style="transform: scale(1); opacity: 1;">
             </div>
@@ -20,6 +201,57 @@
               </div>
             </div>
           </div>
+
+        </div>
+
+        <div *ngIf="chat" class="chat_wrapper">
+
+          <div class="head_info">
+            <div class="head_avatar">
+              <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+
+              <div class="chat_infos">
+                <h4>Leon TOUTOUNI</h4>
+                <small>last seen today at 11:19 AM</small>
+              </div>
+
+            </div>
+            <div class="spacer"></div>
+            <div class="head_button">
+              <button title="Search">
+                <mat-icon>search</mat-icon>
+              </button>
+              <button title="Menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+            </div>
+          </div>
+
+          <div class="chat_content">
+
+          </div>
+
+          <div class="head_info type_message_content">
+
+            <div class="emoticon_file_btn">
+              <button>
+                <mat-icon>insert_emoticon</mat-icon>
+              </button>
+              <button>
+                <mat-icon class="file">attach_file</mat-icon>
+              </button>
+            </div>
+
+            <input type="text" placeholder="Type a message" >
+
+            <div class="send_button">
+              <button>
+                <mat-icon>send</mat-icon>
+              </button>
+            </div>
+
+          </div>
+
         </div>
 
       </div>
