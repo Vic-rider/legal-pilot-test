@@ -10,31 +10,41 @@
   <div class="landing-window">
 
     <div class="landing-main">
-      <div class="landing-title _3-XoE">Veuillez vous connecter !</div>
 
-      <div class="_form">
+      <div class="welcom_img">
+        <img src="../../../../assets/img/intro-connection-light_c98cc75f2aa905314d74375a975d2cf2-removebg-preview.png" alt="">
+      </div>
+
+      <!-- <div class="landing-title _3-XoE">Veuillez vous connecter !</div> -->
+
+      <form class="_form" [formGroup]="loginForm">
 
         <div class="input_form">
           <!-- <h4>Email</h4> -->
           <input
             type="email"
+            formControlName="email"
             placeholder="Votre mail"
-            name="email" id="">
+            name="email">
         </div>
 
         <div class="input_form">
           <!-- <h4>Mot de Passe</h4> -->
           <input
             type="password"
+            formControlName="password"
             placeholder="Votre Mot de passe"
-            name="password" id="">
+            name="password">
         </div>
 
         <div class="input_form">
-          <button class="submit_button">Connexion</button>
+          <button (click)="submit()" type="submit" class="submit_button">
+            <span *ngIf="!_load">Connexion</span>
+            <span *ngIf="_load">Loading....</span>
+          </button>
         </div>
 
-      </div>
+      </form>
 
     </div>
 

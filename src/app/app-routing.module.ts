@@ -7,7 +7,7 @@ import { ChatAppComponent } from './pages/chat-app/chat-app.component';
 const routes: Routes = [
   {
     path: '',
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     loadChildren:() => import('./pages/chat-app/chat-app.module').then((m) => m.ChatAppModule)
   },
   {
