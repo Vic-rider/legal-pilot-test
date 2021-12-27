@@ -13,12 +13,38 @@
           <button title="Status">
             <mat-icon>donut_large</mat-icon>
           </button>
+
           <button title="New Chat">
             <mat-icon>chat</mat-icon>
           </button>
-          <button title="Menu">
+
+          <button title="Menu" [matMenuTriggerFor]="Menumenu">
             <mat-icon>more_vert</mat-icon>
           </button>
+          <mat-menu #Menumenu="matMenu" xPosition="before" style="overflow: hidden;">
+            <button mat-menu-item>
+              <span>New Groupœ</span>
+            </button>
+            <button mat-menu-item>
+              <span>Profile</span>
+            </button>
+            <button mat-menu-item>
+              <span>Catalog</span>
+            </button>
+            <button mat-menu-item>
+              <span>Starred messages</span>
+            </button>
+            <button mat-menu-item>
+              <span>Labels</span>
+            </button>
+            <button mat-menu-item>
+              <span>Settings</span>
+            </button>
+            <button mat-menu-item>
+              <span>Log out</span>
+            </button>
+          </mat-menu>
+
         </div>
       </div>
 
@@ -116,72 +142,6 @@
 
         </div>
 
-        <div class="chat">
-
-          <div class="chat_pic">
-            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
-          </div>
-
-          <div class="chat_infos">
-            <div class="title">
-              <h4>Communauté Music</h4>
-              <div class="spacer"></div>
-              <small>7:58AM</small>
-            </div>
-
-            <div class="some_details">
-              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
-              <div class="spacer"></div>
-              <small class="msg_datas">25</small>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="chat">
-
-          <div class="chat_pic">
-            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
-          </div>
-
-          <div class="chat_infos">
-            <div class="title">
-              <h4>Communauté Music</h4>
-              <div class="spacer"></div>
-              <small>7:58AM</small>
-            </div>
-
-            <div class="some_details">
-              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
-              <div class="spacer"></div>
-              <small class="msg_datas">25</small>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="chat">
-
-          <div class="chat_pic">
-            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
-          </div>
-
-          <div class="chat_infos">
-            <div class="title">
-              <h4>Communauté Music</h4>
-              <div class="spacer"></div>
-              <small>7:58AM</small>
-            </div>
-
-            <div class="some_details">
-              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
-              <div class="spacer"></div>
-              <small class="msg_datas">25</small>
-            </div>
-          </div>
-
-        </div>
-
       </div>
 
     </div>
@@ -190,69 +150,345 @@
 
       <div class="ldL67 _3sh5K">
 
-        <div *ngIf="!chat" class="zaKsw">
+        <mat-drawer-container class="example-container" autosize>
+          <mat-drawer #drawer position="end" mode="side" style="width: 40%;">
 
-          <div class="_1RAKT">
-            <div class="_2JIth" data-asset-intro-image-light="true" style="transform: scale(1); opacity: 1;">
-            </div>
-            <div class="_35HSa" style="opacity: 1; transform: translateY(0px);">
-              <h1 class="_1vPMT">Keep your phone connected</h1>
-              <div class="_2-IT7">WhatsApp connects to your phone to sync messages. To reduce data usage, connect your phone to Wi-Fi.
-              </div>
-            </div>
-          </div>
+            <div class="chat_all_infos_container">
 
-        </div>
-
-        <div *ngIf="chat" class="chat_wrapper">
-
-          <div class="head_info">
-            <div class="head_avatar">
-              <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
-
-              <div class="chat_infos">
-                <h4>Leon TOUTOUNI</h4>
-                <small>last seen today at 11:19 AM</small>
+              <div class="head_info">
+                <div class="head_button">
+                  <button (click)="drawer.toggle()" title="Search">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </div>
+                <h4 style="padding-top: 6px;">Contact Info</h4>
               </div>
 
+              <div class="primary_infos info mb_10 info">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+
+                <div class="details">
+                  <h1>Robin EBOUE</h1>
+                  <h3>letes@gmail.com</h3>
+                </div>
+              </div>
+
+              <div class="about_info mb_10 info">
+                <div class="header">
+                  <h5>About</h5>
+                  <div class="spacer"></div>
+                </div>
+                <h4>Lorem ipsum dolor sit amet.</h4>
+              </div>
+
+              <div class="media_links_infos mb_10 info">
+                <div class="header">
+                  <h4>Media, links and docs</h4>
+                  <div class="spacer"></div>
+                  <h4>100</h4>
+                  <mat-icon>keyboard_arrow_right</mat-icon>
+                </div>
+                <div class="content">
+                  <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+                  <div class="spacer"></div>
+                  <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+                  <div class="spacer"></div>
+                  <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+                </div>
+              </div>
+
+              <div class="starred_messages mb_10 info">
+                <div class="ico">
+                  <mat-icon>star</mat-icon>
+                </div>
+                <h3>Starred messages</h3>
+                <div class="spacer"></div>
+                <button>
+                  <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+              </div>
+
+              <div class="mute_notifs info">
+                <div class="ico">
+                  <mat-icon>notifications</mat-icon>
+                </div>
+                <h3>Mute Notifications</h3>
+                <div class="spacer"></div>
+
+                <mat-slide-toggle ></mat-slide-toggle>
+              </div>
+
+              <div class="disaps_messages mb_10 info">
+                <div class="ico">
+                  <mat-icon>slow_motion_video</mat-icon>
+                </div>
+                <h3>Disappearing messages</h3>
+                <div class="spacer"></div>
+                <button>
+                  <mat-icon>keyboard_arrow_right</mat-icon>
+                </button>
+              </div>
+
+              <div class="common_group_content mb_10 info">
+                <div class="header">
+                  <h4>1 group in common</h4>
+                </div>
+
+                <div class="groups_list info">
+                  <div class="group">
+                    <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+                    <div class="details">
+                      <h3>Communauté Music</h3>
+                      <h4>Raoul, Marcelin, Alban, Maurice</h4>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="block_report_content mb_10 info">
+                <div class="danger_action">
+                  <mat-icon>not_interested</mat-icon>
+                  <h3>Block Raoul ODIN</h3>
+                </div>
+                <div class="danger_action">
+                  <mat-icon>thumb_down</mat-icon>
+                  <h3>Report Raoul ODIN</h3>
+                </div>
+              </div>
+
+              <div class="delete_chat_content info mb_10">
+                <div class="danger_action">
+                  <mat-icon>delete</mat-icon>
+                  <h3>Delete chat</h3>
+                </div>
+              </div>
+
+              <div class="mb_10"></div>
+
             </div>
-            <div class="spacer"></div>
-            <div class="head_button">
-              <button title="Search">
-                <mat-icon>search</mat-icon>
-              </button>
-              <button title="Menu">
-                <mat-icon>more_vert</mat-icon>
-              </button>
+
+          </mat-drawer>
+
+          <div *ngIf="!chat" class="zaKsw">
+
+            <div class="_1RAKT">
+              <div class="_2JIth" data-asset-intro-image-light="true" style="transform: scale(1); opacity: 1;">
+              </div>
+              <div class="_35HSa" style="opacity: 1; transform: translateY(0px);">
+                <h1 class="_1vPMT">Keep your phone connected</h1>
+                <div class="_2-IT7">WhatsApp connects to your phone to sync messages. To reduce data usage, connect your phone to Wi-Fi.
+                </div>
+              </div>
             </div>
+
           </div>
 
-          <div class="chat_content">
+          <div *ngIf="chat" class="chat_wrapper">
+
+            <div class="head_info top_chat">
+              <div class="head_avatar" (click)="drawer.toggle()" >
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+
+                <div class="chat_infos">
+                  <h4>Leon TOUTOUNI</h4>
+                  <small>last seen today at 11:19 AM</small>
+                </div>
+
+              </div>
+              <div class="spacer top_chat" (click)="drawer.toggle()"></div>
+              <div class="head_button">
+                <button title="Search">
+                  <mat-icon>search</mat-icon>
+                </button>
+                <button title="Menu" [matMenuTriggerFor]="chatMenumenu">
+                  <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #chatMenumenu="matMenu" xPosition="before" style="overflow: hidden;">
+                  <button mat-menu-item>
+                    <span>Contact Info</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Select messages</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Close chat</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Mute notifications</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Clear messages</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Delete chat</span>
+                  </button>
+                </mat-menu>
+              </div>
+            </div>
+
+            <div class="chat_content_bg"></div>
+
+            <div class="chat_content">
+
+              <div (click)="viewMoreAboutSecureChat()" class="secure_info">
+                <p>
+                  <mat-icon>lock</mat-icon>
+                  Messages are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them.
+                </p>
+                <p class="more" (click)="viewMoreAboutSecureChat()" >Click to learn more.</p>
+              </div>
+
+              <div (click)="viewMoreAboutBusinessChat()" class="business_acount_info">
+                <p>This chat is with a business account. Click to learn more.</p>
+              </div>
+
+              <div class="msg fromOther">
+
+                <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                  <mat-icon>keyboard_arrow_down</mat-icon>
+                </button>
+
+                <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                  <button mat-menu-item>
+                    <span>Reply</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Forward message</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Edit label</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Start message</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Delete message</span>
+                  </button>
+                </mat-menu>
+
+                <!-- <div class="from_arr"></div> -->
+                <svg class="from_arr_" height="210" width="500">
+                  <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
+                  Sorry, your browser does not support inline SVG.
+                </svg>
+                <h5>Hello chef, comment tu vas ?</h5>
+
+                <div class="spacer"></div>
+
+                <div class="details">
+                  <small>3:48 PM</small>
+                </div>
+              </div>
+
+              <div class="msg">
+
+                <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                  <mat-icon>keyboard_arrow_down</mat-icon>
+                </button>
+
+                <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                  <button mat-menu-item>
+                    <span>Reply</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Forward message</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Edit label</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Start message</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Delete message</span>
+                  </button>
+                </mat-menu>
+
+                <!-- <div class="from_arr"></div> -->
+                <svg class="from_arr_" height="210" width="500">
+                  <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                  Sorry, your browser does not support inline SVG.
+                </svg>
+                <h5>Hello chef, comment tu vas ?</h5>
+
+                <div class="spacer"></div>
+
+                <div class="details">
+                  <small>3:48 PM</small>
+                  <button>
+                    <mat-icon>done_all</mat-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="msg">
+
+                <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                  <mat-icon>keyboard_arrow_down</mat-icon>
+                </button>
+
+                <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                  <button mat-menu-item>
+                    <span>Reply</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Forward message</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Edit label</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Start message</span>
+                  </button>
+                  <button mat-menu-item>
+                    <span>Delete message</span>
+                  </button>
+                </mat-menu>
+
+                <!-- <div class="from_arr"></div> -->
+                <svg class="from_arr_" height="210" width="500">
+                  <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                  Sorry, your browser does not support inline SVG.
+                </svg>
+                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maxime explicabo, porro mollitia earum sunt, delectus ducimus, rem similique fugiat molestias perspiciatis quaerat non eveniet quasi alias ipsum deleniti modi obcaecati. Sunt porro eos eveniet nisi, doloremque corporis molestiae? Modi labore architecto, fuga quae voluptatibus deleniti error ea accusamus nobis.</h5>
+
+                <div class="spacer"></div>
+
+                <div class="details">
+                  <small>3:48 PM</small>
+                  <button>
+                    <mat-icon>done_all</mat-icon>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="head_info type_message_content">
+
+              <div class="emoticon_file_btn">
+                <button>
+                  <mat-icon>insert_emoticon</mat-icon>
+                </button>
+                <button>
+                  <mat-icon class="file">attach_file</mat-icon>
+                </button>
+              </div>
+
+              <input type="text" placeholder="Type a message" >
+
+              <div class="mic_button">
+                <button>
+                  <mat-icon>mic</mat-icon>
+                </button>
+              </div>
+
+            </div>
 
           </div>
 
-          <div class="head_info type_message_content">
-
-            <div class="emoticon_file_btn">
-              <button>
-                <mat-icon>insert_emoticon</mat-icon>
-              </button>
-              <button>
-                <mat-icon class="file">attach_file</mat-icon>
-              </button>
-            </div>
-
-            <input type="text" placeholder="Type a message" >
-
-            <div class="send_button">
-              <button>
-                <mat-icon>send</mat-icon>
-              </button>
-            </div>
-
-          </div>
-
-        </div>
+        </mat-drawer-container>
 
       </div>
 

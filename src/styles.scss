@@ -1,7 +1,26 @@
 body {
   font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
+  font-weight: normal !important;
 }
+
+@import '~@angular/material/theming';
+
+$primary: ( Main:#d19d2e, Light:#D7C9BD, A100: #9E8169, contrast: ( Main: #f5f5f5, Light: #000, Dark: #fff));
+// $secondary: (Main: #D7C9BD, Light:#D7C9BD, A100: #9E8169)
+
+
+/* ======== Angular material custom themes ======== */
+
+$my-custom-primary: mat-palette($primary, Main, Light, A100);
+$my-custom-accent: mat-palette($mat-pink, 100, 500, A100);
+$my-custom-warn: mat-palette($mat-lime);
+$my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-custom-warn);
+
+@include angular-material-theme($my-custom-theme);
 
 .spacer {
   flex: 1 1 auto;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
