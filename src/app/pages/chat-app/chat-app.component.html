@@ -2,11 +2,163 @@
 
   <div class="content_wrapper">
 
+    <mat-drawer-container style="overflow: hidden;  width: 36em;">
+      <mat-drawer #settingdrawer position="start" mode="over" style="width: 100%;">
+
+        <div class="account_settings">
+
+          <div class="header">
+            <div class="line"></div>
+            <div class="line">
+              <button (click)="settingdrawer.toggle()">
+                <mat-icon>keyboard_backspace</mat-icon>
+              </button>
+              <h3>Profile</h3>
+            </div>
+          </div>
+
+          <div class="settings">
+
+            <div class="avatar">
+              <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+            </div>
+
+            <div class="set" style="height: 5em;"></div>
+
+            <div class="set">
+              <mat-icon>account_box</mat-icon>
+              <div class="details">
+                <h2>Romain EBOUE</h2>
+                <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sint dolor dolores maxime ex nostrum perferendis excepturi nisi necessitatibus natus.</p>
+              </div>
+            </div>
+
+            <div class="set">
+              <mat-icon>store</mat-icon>
+              <h3>Buisiness Description</h3>
+              <div class="spacer"></div>
+              <button>
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+
+            <div class="set">
+              <mat-icon>local_offer</mat-icon>
+              <h3>Computer Company</h3>
+              <div class="spacer"></div>
+              <button>
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+
+            <div class="set">
+              <mat-icon>location_on</mat-icon>
+              <h3>Buisiness Adresse</h3>
+              <div class="spacer"></div>
+              <button>
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+
+            <div class="set">
+              <mat-icon>history</mat-icon>
+              <h3>Buisiness Hours</h3>
+              <div class="spacer"></div>
+              <button>
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+
+            <div class="set">
+              <mat-icon>email</mat-icon>
+              <h3>Email Adress</h3>
+              <div class="spacer"></div>
+              <button>
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+
+            <div class="set mb_30">
+              <mat-icon>public</mat-icon>
+              <h3>Website</h3>
+              <div class="spacer"></div>
+              <button>
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+
+            <div class="catalogue mb_30">
+              <div class="head">
+                <h4>Products</h4>
+                <div class="spacer"></div>
+                <mat-icon>keyboard_arrow_right</mat-icon>
+              </div>
+
+              <div class="cat_list">
+
+                <div class="cat new">
+                  <button>
+                    <mat-icon>add</mat-icon>
+                  </button>
+                </div>
+
+                <div class="spacer"></div>
+
+                <div class="cat">
+
+                </div>
+
+                <div class="spacer"></div>
+
+                <div class="cat">
+
+                </div>
+
+              </div>
+
+              <div class="add_catalog">
+                <button>ADD CATALOG</button>
+              </div>
+
+            </div>
+
+            <div class="about set">
+              <div class="head">
+                <h4>About and Phone Number</h4>
+              </div>
+            </div>
+
+            <div class="set">
+              <mat-icon>info</mat-icon>
+              <h3>Available</h3>
+              <div class="spacer"></div>
+              <button>
+                <mat-icon>edit</mat-icon>
+              </button>
+            </div>
+
+            <div class="set">
+              <mat-icon>call</mat-icon>
+              <div >
+                <h3>letest@gmail.com</h3>
+                <p style="text-align: justify; margin-left: 1em;">
+                  Your phone number can be edited from the app on your mobile device.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </mat-drawer>
+
+
     <div class="list_side">
 
       <div class="head_info">
         <div class="head_avatar">
-          <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+          <img (click)="settingdrawer.toggle()" src="../../../assets/img/musician-5960112_1920.jpg" alt="">
         </div>
         <div class="spacer"></div>
         <div class="head_button">
@@ -146,6 +298,9 @@
 
     </div>
 
+    </mat-drawer-container>
+
+
     <div class="chat_side">
 
       <div class="ldL67 _3sh5K">
@@ -155,7 +310,7 @@
 
             <div class="chat_all_infos_container">
 
-              <div class="head_info">
+              <div class="head_info chatstuff_head">
                 <div class="head_button">
                   <button (click)="drawer.toggle()" title="Search">
                     <mat-icon>close</mat-icon>
@@ -286,7 +441,7 @@
 
           <div *ngIf="chat" class="chat_wrapper">
 
-            <div class="head_info top_chat">
+            <div class="head_info chatstuff_head top_chat">
               <div class="head_avatar" (click)="drawer.toggle()" >
                 <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
 

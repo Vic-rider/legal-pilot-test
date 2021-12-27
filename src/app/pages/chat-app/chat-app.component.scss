@@ -61,7 +61,7 @@ h5, p, h4 {
 }
 
 .list_side {
-  width: 35em;
+  width: auto;
   overflow: auto;
   overflow-x: hidden;
 }
@@ -146,6 +146,9 @@ h5, p, h4 {
   display: flex;
   background-color: #ededed;
   height: 40px;
+}
+
+.chatstuff_head {
   border-left: gray 1px solid;
 }
 
@@ -430,6 +433,10 @@ button {
   margin-bottom: 10px;
 }
 
+.mb_30 {
+  margin-bottom: 30px;
+}
+
 .chat_all_infos_container {
   background-color: #ededed;
 }
@@ -537,5 +544,119 @@ button {
 
   h3 {
     margin-left: 20px;
+  }
+}
+
+.account_settings {
+  .header {
+    height: 8em;
+    background-color: #009688;
+
+    .line {
+      display: flex;
+      padding: 2em 0 0 1em;
+      color: #fff;
+
+      button {
+        cursor: pointer;
+        background-color: #009688;
+        color: #fff;
+      }
+
+      h3 {
+        margin: 0;
+      }
+    }
+
+  }
+
+  .avatar img {
+    position: relative;
+    top: 4em;
+    left: 112px;
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 5px #fff solid;
+  }
+
+  .settings {
+    background-color: #eaf2f5;
+    padding: 3em 0 1em 0;
+
+    .set {
+      background-color: #fff;
+      display: flex;
+      padding: 1em;
+
+      h3 {
+        margin-left: 1em;
+      }
+
+      .details {
+        margin-left: 1em;
+        .h2 {
+          margin: 0;
+        }
+      }
+
+      button {
+        background-color: #fff;
+      }
+
+    }
+
+    .catalogue, .about {
+      padding: 1em;
+      background-color: #fff;
+
+      .head {
+        display: flex;
+        padding: 1em;
+
+        h4 {
+          color: #009688;
+        }
+      }
+
+      .cat_list {
+        display: flex;
+        margin-bottom: 10px;
+
+        .cat {
+          border: 1px solid #ededed;
+          background-color: #ededed;
+          height: 100px;
+          width: 100px;
+          border-radius: 8px;
+        }
+
+        .new {
+          background-color: #fff;
+
+          button {
+            position: relative;
+            top: 35px;
+            left: 30px;
+            background: #fff;
+          }
+
+        }
+
+      }
+
+      .add_catalog {
+        text-align: center;
+
+        button {
+         color: green;
+         padding: 7px 12px;
+         background: #fff;
+         border: 1px solid #ededed;
+         border-radius: 5px;
+        }
+      }
+
+    }
   }
 }
