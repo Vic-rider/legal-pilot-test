@@ -13,11 +13,44 @@ export class ChatAppComponent implements OnInit {
   chat = false;
   showFiller = false;
 
+  msg_list = [
+    {
+      text: 'Hello, comment tu vas ?',
+      fromMe: false,
+      date: new Date()
+    },
+    {
+      text: 'Super bien et toi ?',
+      fromMe: true,
+      date: new Date()
+    }
+  ]
+
+  newMsg:any
+
   constructor(
     public dialog: MatDialog) { }
 
   ngOnInit() {
     this.chat = true
+  }
+
+  addMessage() {
+
+    if(!this.newMsg) {
+      return
+    }
+
+    this.msg_list.push(
+      {
+        text: this.newMsg,
+        fromMe: true,
+        date: new Date()
+      }
+    )
+
+    this.newMsg = ''
+
   }
 
   viewMoreAboutSecureChat() {

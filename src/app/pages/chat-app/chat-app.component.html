@@ -867,45 +867,55 @@
                   <p>This chat is with a business account. Click to learn more.</p>
                 </div>
 
-                <div class="msg fromOther">
+                <div class="msg" [ngClass]="{'fromOther': !msg.fromMe}" *ngFor="let msg of msg_list" >
 
-                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
-                    <mat-icon>keyboard_arrow_down</mat-icon>
-                  </button>
+                    <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                      <mat-icon>keyboard_arrow_down</mat-icon>
+                    </button>
 
-                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
-                    <button mat-menu-item>
-                      <span>Reply</span>
-                    </button>
-                    <button mat-menu-item>
-                      <span>Forward message</span>
-                    </button>
-                    <button mat-menu-item>
-                      <span>Edit label</span>
-                    </button>
-                    <button mat-menu-item>
-                      <span>Start message</span>
-                    </button>
-                    <button mat-menu-item>
-                      <span>Delete message</span>
-                    </button>
-                  </mat-menu>
+                    <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                      <button mat-menu-item>
+                        <span>Reply</span>
+                      </button>
+                      <button mat-menu-item>
+                        <span>Forward message</span>
+                      </button>
+                      <button mat-menu-item>
+                        <span>Edit label</span>
+                      </button>
+                      <button mat-menu-item>
+                        <span>Start message</span>
+                      </button>
+                      <button mat-menu-item>
+                        <span>Delete message</span>
+                      </button>
+                    </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
-                  <svg class="from_arr_" height="210" width="500">
-                    <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
-                    Sorry, your browser does not support inline SVG.
-                  </svg>
-                  <h5>Hello chef, comment tu vas ?</h5>
+                    <!-- <div class="from_arr"></div> -->
+                    <svg *ngIf="!msg.fromMe" class="from_arr_" height="210" width="500">
+                      <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
+                      Sorry, your browser does not support inline SVG.
+                    </svg>
 
-                  <div class="spacer"></div>
+                    <svg *ngIf="msg.fromMe" class="from_arr_" height="210" width="500">
+                      <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                      Sorry, your browser does not support inline SVG.
+                    </svg>
 
-                  <div class="details">
-                    <small>3:48 PM</small>
-                  </div>
+                    <h5>{{msg.text}}</h5>
+
+                    <div class="spacer"></div>
+
+                    <div class="details">
+                      <small>3:48 PM</small>
+                      <button *ngIf="msg.fromMe">
+                        <mat-icon>done_all</mat-icon>
+                      </button>
+                    </div>
+
                 </div>
 
-                <div class="msg">
+                <!-- <div class="msg">
 
                   <button class="msg_options" [matMenuTriggerFor]="msgmenu">
                     <mat-icon>keyboard_arrow_down</mat-icon>
@@ -929,11 +939,11 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
                   </svg>
+
                   <h5>Hello chef, comment tu vas ?</h5>
 
                   <div class="spacer"></div>
@@ -970,7 +980,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1011,7 +1020,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1052,7 +1060,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1090,7 +1097,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1131,7 +1137,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1172,7 +1177,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1213,7 +1217,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1251,7 +1254,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1292,7 +1294,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1333,7 +1334,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1371,7 +1371,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1412,7 +1411,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1453,7 +1451,6 @@
                     </button>
                   </mat-menu>
 
-                  <!-- <div class="from_arr"></div> -->
                   <svg class="from_arr_" height="210" width="500">
                     <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
                     Sorry, your browser does not support inline SVG.
@@ -1468,7 +1465,7 @@
                       <mat-icon>done_all</mat-icon>
                     </button>
                   </div>
-                </div>
+                </div> -->
 
               </div>
 
@@ -1483,7 +1480,7 @@
                   </button>
                 </div>
 
-                <input type="text" placeholder="Type a message" >
+                <input type="text" role="submit" (change)="addMessage()" [(ngModel)]="newMsg" placeholder="Type a message" >
 
                 <div class="mic_button">
                   <button>

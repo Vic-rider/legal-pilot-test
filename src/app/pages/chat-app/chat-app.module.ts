@@ -11,10 +11,12 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle'
 
 import { LessTextPipe } from 'src/app/core/pipes/lessText.pipe';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
 
     MatIconModule,
     MatDialogModule,
