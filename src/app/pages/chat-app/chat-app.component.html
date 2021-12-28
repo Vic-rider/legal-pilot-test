@@ -153,6 +153,237 @@
 
       </mat-drawer>
 
+      <mat-drawer #newchatdrawer position="start" mode="over" style="width: 100%;">
+
+        <div class="account_settings">
+
+          <div class="header">
+            <div class="line"></div>
+            <div class="line">
+              <button (click)="newchatdrawer.toggle()">
+                <mat-icon>keyboard_backspace</mat-icon>
+              </button>
+              <h3>New chat</h3>
+            </div>
+          </div>
+
+          <div class="chat_search">
+            <input type="search" placeholder="Search or start new chat">
+          </div>
+
+          <div class="new_group">
+            <button>
+              <mat-icon>group_add</mat-icon>
+            </button>
+
+            <h3>New group</h3>
+          </div>
+
+          <div class="chat_list">
+
+            <div class="frequetly_contected">
+              <h3>FREQUENTLY CONTACTED</h3>
+            </div>
+
+            <div class="chat first_recent_chat">
+
+              <div class="chat_pic">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>Communauté Music</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chat">
+
+              <div class="chat_pic">
+                <img src="https://ui-avatars.com/api/?name=Victor+DIMITRI&background=random" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>Victor DIMITRI</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chat">
+
+              <div class="chat_pic">
+                <img src="https://ui-avatars.com/api/?name=John+Doe&background=random" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>John DOE</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="chat_list">
+
+            <div class="frequetly_contected">
+              <h3>#</h3>
+            </div>
+
+            <div class="chat first_recent_chat">
+
+              <div class="chat_pic">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>letest@gmail.com</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'Disponible' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chat">
+
+              <div class="chat_pic">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>letest001@gmail.com</h4>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chat">
+
+              <div class="chat_pic">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>1</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'Hey there ! I am using WhatsApp' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="chat_list">
+
+            <div class="frequetly_contected">
+              <h3>A</h3>
+            </div>
+
+            <div class="chat first_recent_chat">
+
+              <div class="chat_pic">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>Alan</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'Disponnible' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chat first_recent_chat">
+
+              <div class="chat_pic">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>Alan</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'Hey there ! I am using whatsApp' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chat first_recent_chat">
+
+              <div class="chat_pic">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>Alain ORJ</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'Appels d\'urgence seulement' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="chat first_recent_chat">
+
+              <div class="chat_pic">
+                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+              </div>
+
+              <div class="chat_infos">
+                <div class="title">
+                  <h4>Adam</h4>
+                </div>
+
+                <div class="some_details">
+                  <h5>{{'.' | lessText}}</h5>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </mat-drawer>
+
 
     <div class="list_side">
 
@@ -166,7 +397,7 @@
             <mat-icon>donut_large</mat-icon>
           </button>
 
-          <button title="New Chat">
+          <button (click)="newchatdrawer.toggle()" title="New Chat">
             <mat-icon>chat</mat-icon>
           </button>
 
@@ -220,7 +451,29 @@
             </div>
 
             <div class="some_details">
-              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <h5>{{'Dis vrai ? 😂😂😂' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">5</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="https://ui-avatars.com/api/?name=Lewis+C&background=random" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Léwis CARLOS</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'🤣🤣🤣 Mdr' | lessText}}</h5>
               <div class="spacer"></div>
               <small class="msg_datas">25</small>
             </div>
@@ -231,12 +484,12 @@
         <div class="chat">
 
           <div class="chat_pic">
-            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+            <img src="https://ui-avatars.com/api/?name=Ch+T&background=random" alt="">
           </div>
 
           <div class="chat_infos">
             <div class="title">
-              <h4>Communauté Music</h4>
+              <h4>Christian TOURIN</h4>
               <div class="spacer"></div>
               <small>7:58AM</small>
             </div>
@@ -244,7 +497,7 @@
             <div class="some_details">
               <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
               <div class="spacer"></div>
-              <small class="msg_datas">25</small>
+              <!-- <small class="msg_datas">25</small> -->
             </div>
           </div>
 
@@ -253,20 +506,20 @@
         <div class="chat">
 
           <div class="chat_pic">
-            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+            <img src="https://ui-avatars.com/api/?name=MArine+SUZE&background=random" alt="">
           </div>
 
           <div class="chat_infos">
             <div class="title">
-              <h4>Communauté Music</h4>
+              <h4>Marlène SUZE</h4>
               <div class="spacer"></div>
               <small>7:58AM</small>
             </div>
 
             <div class="some_details">
-              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <h5>{{'C\'était super  👌👌 ' | lessText}}</h5>
               <div class="spacer"></div>
-              <small class="msg_datas">25</small>
+              <small class="msg_datas">2</small>
             </div>
           </div>
 
@@ -275,20 +528,108 @@
         <div class="chat">
 
           <div class="chat_pic">
-            <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+            <img src="https://ui-avatars.com/api/?name=P+A&background=random" alt="">
           </div>
 
           <div class="chat_infos">
             <div class="title">
-              <h4>Communauté Music</h4>
+              <h4>Peter ATOP</h4>
               <div class="spacer"></div>
               <small>7:58AM</small>
             </div>
 
             <div class="some_details">
-              <h5>{{'Dis, je peux passer prendre mon colis demain ?' | lessText}}</h5>
+              <h5>{{'Réserve moi 2 ' | lessText}}</h5>
               <div class="spacer"></div>
-              <small class="msg_datas">25</small>
+              <small class="msg_datas">2</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="https://ui-avatars.com/api/?name=Ha+Ad&background=random" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Harold ARMIN</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{' je viens déja ' | lessText}}</h5>
+              <div class="spacer"></div>
+              <!-- <small class="msg_datas">2</small> -->
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="https://ui-avatars.com/api/?name=Rose+CO&background=random" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Rosine COULIBALY</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'je suis bien renté ' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">2</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="https://ui-avatars.com/api/?name=JUL+CO&background=random" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Julien COULIBALY</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'hum... ' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">2</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chat">
+
+          <div class="chat_pic">
+            <img src="https://ui-avatars.com/api/?name=Adr+Dia&background=random" alt="">
+          </div>
+
+          <div class="chat_infos">
+            <div class="title">
+              <h4>Adrien DIALO</h4>
+              <div class="spacer"></div>
+              <small>7:58AM</small>
+            </div>
+
+            <div class="some_details">
+              <h5>{{'okk . ' | lessText}}</h5>
+              <div class="spacer"></div>
+              <small class="msg_datas">2</small>
             </div>
           </div>
 
@@ -305,8 +646,9 @@
 
       <div class="ldL67 _3sh5K">
 
-        <mat-drawer-container class="example-container" autosize>
-          <mat-drawer #drawer position="end" mode="side" style="width: 40%;">
+        <mat-drawer-container>
+
+          <mat-drawer #drawer position="end" mode="side" style="width: 40%; overflow: hidden;">
 
             <div class="chat_all_infos_container">
 
@@ -439,209 +781,721 @@
 
           </div>
 
-          <div *ngIf="chat" class="chat_wrapper">
+          <mat-drawer-container>
 
-            <div class="head_info chatstuff_head top_chat">
-              <div class="head_avatar" (click)="drawer.toggle()" >
-                <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
+            <mat-drawer #searchdrawer position="end" mode="side" style="width: 40%; overflow: hidden;">
 
-                <div class="chat_infos">
-                  <h4>Leon TOUTOUNI</h4>
-                  <small>last seen today at 11:19 AM</small>
+              <div class="chat_all_infos_container">
+
+                <div class="head_info chatstuff_head">
+                  <div class="head_button">
+                    <button  (click)="searchdrawer.toggle()" title="Search">
+                      <mat-icon>close</mat-icon>
+                    </button>
+                  </div>
+                  <h4 style="padding-top: 6px;">Search Messages</h4>
+                </div>
+
+                <div class="chat_search">
+                  <input type="search" placeholder="Search or start new chat">
+                </div>
+
+                <div class="sub_info">
+                  <h4>Search for messages within Leon TOUTOUNI.</h4>
                 </div>
 
               </div>
-              <div class="spacer top_chat" (click)="drawer.toggle()"></div>
-              <div class="head_button">
-                <button title="Search">
-                  <mat-icon>search</mat-icon>
-                </button>
-                <button title="Menu" [matMenuTriggerFor]="chatMenumenu">
-                  <mat-icon>more_vert</mat-icon>
-                </button>
-                <mat-menu #chatMenumenu="matMenu" xPosition="before" style="overflow: hidden;">
-                  <button mat-menu-item>
-                    <span>Contact Info</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Select messages</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Close chat</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Mute notifications</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Clear messages</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Delete chat</span>
-                  </button>
-                </mat-menu>
-              </div>
-            </div>
 
-            <div class="chat_content_bg"></div>
+            </mat-drawer>
 
-            <div class="chat_content">
+            <div *ngIf="chat" class="chat_wrapper">
 
-              <div (click)="viewMoreAboutSecureChat()" class="secure_info">
-                <p>
-                  <mat-icon>lock</mat-icon>
-                  Messages are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them.
-                </p>
-                <p class="more" (click)="viewMoreAboutSecureChat()" >Click to learn more.</p>
-              </div>
+              <div class="head_info chatstuff_head top_chat">
+                <div class="head_avatar" (click)="toogleToolbar(drawer)" >
+                  <img src="../../../assets/img/musician-5960112_1920.jpg" alt="">
 
-              <div (click)="viewMoreAboutBusinessChat()" class="business_acount_info">
-                <p>This chat is with a business account. Click to learn more.</p>
-              </div>
+                  <div class="chat_infos">
+                    <h4>Leon TOUTOUNI</h4>
+                    <small>last seen today at 11:19 AM</small>
+                  </div>
 
-              <div class="msg fromOther">
-
-                <button class="msg_options" [matMenuTriggerFor]="msgmenu">
-                  <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-
-                <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
-                  <button mat-menu-item>
-                    <span>Reply</span>
+                </div>
+                <div class="spacer top_chat" (click)="toogleToolbar(drawer)"></div>
+                <div class="head_button">
+                  <button (click)="searchdrawer.toggle()" title="Search">
+                    <mat-icon>search</mat-icon>
                   </button>
-                  <button mat-menu-item>
-                    <span>Forward message</span>
+                  <button title="Menu" [matMenuTriggerFor]="chatMenumenu">
+                    <mat-icon>more_vert</mat-icon>
                   </button>
-                  <button mat-menu-item>
-                    <span>Edit label</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Start message</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Delete message</span>
-                  </button>
-                </mat-menu>
-
-                <!-- <div class="from_arr"></div> -->
-                <svg class="from_arr_" height="210" width="500">
-                  <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
-                  Sorry, your browser does not support inline SVG.
-                </svg>
-                <h5>Hello chef, comment tu vas ?</h5>
-
-                <div class="spacer"></div>
-
-                <div class="details">
-                  <small>3:48 PM</small>
+                  <mat-menu #chatMenumenu="matMenu" xPosition="before" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Contact Info</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Select messages</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Close chat</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Mute notifications</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Clear messages</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete chat</span>
+                    </button>
+                  </mat-menu>
                 </div>
               </div>
 
-              <div class="msg">
+              <div class="chat_content_bg"></div>
 
-                <button class="msg_options" [matMenuTriggerFor]="msgmenu">
-                  <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
+              <div class="chat_content">
 
-                <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
-                  <button mat-menu-item>
-                    <span>Reply</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Forward message</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Edit label</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Start message</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Delete message</span>
-                  </button>
-                </mat-menu>
+                <div (click)="viewMoreAboutSecureChat()" class="secure_info">
+                  <p>
+                    <mat-icon>lock</mat-icon>
+                    Messages are end-to-end encrypted. No one outside of this chat, not even WhatsApp, can read or listen to them.
+                  </p>
+                  <p class="more" (click)="viewMoreAboutSecureChat()" >Click to learn more.</p>
+                </div>
 
-                <!-- <div class="from_arr"></div> -->
-                <svg class="from_arr_" height="210" width="500">
-                  <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
-                  Sorry, your browser does not support inline SVG.
-                </svg>
-                <h5>Hello chef, comment tu vas ?</h5>
+                <div (click)="viewMoreAboutBusinessChat()" class="business_acount_info">
+                  <p>This chat is with a business account. Click to learn more.</p>
+                </div>
 
-                <div class="spacer"></div>
+                <div class="msg fromOther">
 
-                <div class="details">
-                  <small>3:48 PM</small>
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maxime explicabo, porro mollitia earum sunt, delectus ducimus, rem similique fugiat molestias perspiciatis quaerat non eveniet quasi alias ipsum deleniti modi obcaecati. Sunt porro eos eveniet nisi, doloremque corporis molestiae? Modi labore architecto, fuga quae voluptatibus deleniti error ea accusamus nobis.</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg fromOther">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg fromOther">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg fromOther">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#ffff;stroke:#fff;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="msg">
+
+                  <button class="msg_options" [matMenuTriggerFor]="msgmenu">
+                    <mat-icon>keyboard_arrow_down</mat-icon>
+                  </button>
+
+                  <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
+                    <button mat-menu-item>
+                      <span>Reply</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Forward message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Edit label</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Start message</span>
+                    </button>
+                    <button mat-menu-item>
+                      <span>Delete message</span>
+                    </button>
+                  </mat-menu>
+
+                  <!-- <div class="from_arr"></div> -->
+                  <svg class="from_arr_" height="210" width="500">
+                    <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
+                    Sorry, your browser does not support inline SVG.
+                  </svg>
+                  <h5>Hello chef, comment tu vas ?</h5>
+
+                  <div class="spacer"></div>
+
+                  <div class="details">
+                    <small>3:48 PM</small>
+                    <button>
+                      <mat-icon>done_all</mat-icon>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="head_info type_message_content">
+
+                <div class="emoticon_file_btn">
                   <button>
-                    <mat-icon>done_all</mat-icon>
+                    <mat-icon>insert_emoticon</mat-icon>
                   </button>
-                </div>
-              </div>
-
-              <div class="msg">
-
-                <button class="msg_options" [matMenuTriggerFor]="msgmenu">
-                  <mat-icon>keyboard_arrow_down</mat-icon>
-                </button>
-
-                <mat-menu #msgmenu="matMenu" xPosition="after" style="overflow: hidden;">
-                  <button mat-menu-item>
-                    <span>Reply</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Forward message</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Edit label</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Start message</span>
-                  </button>
-                  <button mat-menu-item>
-                    <span>Delete message</span>
-                  </button>
-                </mat-menu>
-
-                <!-- <div class="from_arr"></div> -->
-                <svg class="from_arr_" height="210" width="500">
-                  <polygon points="0,0 0,150 200,0 " style="fill:#dcf8c6;stroke:#dcf8c6;stroke-width:1" />
-                  Sorry, your browser does not support inline SVG.
-                </svg>
-                <h5>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maxime explicabo, porro mollitia earum sunt, delectus ducimus, rem similique fugiat molestias perspiciatis quaerat non eveniet quasi alias ipsum deleniti modi obcaecati. Sunt porro eos eveniet nisi, doloremque corporis molestiae? Modi labore architecto, fuga quae voluptatibus deleniti error ea accusamus nobis.</h5>
-
-                <div class="spacer"></div>
-
-                <div class="details">
-                  <small>3:48 PM</small>
                   <button>
-                    <mat-icon>done_all</mat-icon>
+                    <mat-icon class="file">attach_file</mat-icon>
                   </button>
                 </div>
+
+                <input type="text" placeholder="Type a message" >
+
+                <div class="mic_button">
+                  <button>
+                    <mat-icon>mic</mat-icon>
+                  </button>
+                </div>
+
               </div>
 
             </div>
 
-            <div class="head_info type_message_content">
-
-              <div class="emoticon_file_btn">
-                <button>
-                  <mat-icon>insert_emoticon</mat-icon>
-                </button>
-                <button>
-                  <mat-icon class="file">attach_file</mat-icon>
-                </button>
-              </div>
-
-              <input type="text" placeholder="Type a message" >
-
-              <div class="mic_button">
-                <button>
-                  <mat-icon>mic</mat-icon>
-                </button>
-              </div>
-
-            </div>
-
-          </div>
+          </mat-drawer-container>
 
         </mat-drawer-container>
 

@@ -3,7 +3,12 @@
   font-size: 11px;
 }
 
-h5, p, h4 {
+.frequetly_contected h3 {
+  margin-left: 20px;
+  color: #009688;
+}
+
+h5, p, h4, h3 {
   margin: 0;
   font-weight: 100;
 }
@@ -59,6 +64,12 @@ h5, p, h4 {
   margin: 2em auto;
   min-height: 54em;
   box-shadow: 0 17px 50px 0 rgb(0 0 0 / 19%);
+}
+
+@media screen and (max-width: 1430px)  {
+  .content_wrapper {
+    margin: auto;
+  }
 }
 
 .list_side {
@@ -142,6 +153,10 @@ h5, p, h4 {
   background-image: url('../../../assets/img/intro-connection-light_c98cc75f2aa905314d74375a975d2cf2.jpg');
 }
 
+.first_recent_chat .chat_infos {
+  border-top: 1px solid gray;
+}
+
 .head_info {
   padding: 1em;
   display: flex;
@@ -219,6 +234,7 @@ button {
 .chat {
   padding: 1em;
   display: flex;
+  cursor: pointer;
 }
 
 .chat .material-icons {
@@ -234,6 +250,11 @@ button {
   width: 100%;
   padding-left: 8px;
   border-bottom: 1px solid gray;
+
+  h4 {
+    font-weight: 800;
+    font-family: sans-serif;
+  }
 }
 
 .chat_infos .title, .chat_infos .some_details{
@@ -253,10 +274,38 @@ button {
 }
 
 .some_details .msg_datas {
-  padding: 1px 7px;
+  padding: 0px 7px;
   background-color: #06d755;
   border-radius: 30px;
   color: #fff;
+}
+
+.new_group {
+  display: flex;
+
+  button {
+    padding: 12px;
+    border-radius: 50%;
+    margin: 10px;
+    background: #009688;
+    color: #fff;
+
+    .material-icons {
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    margin-top: 1em;
+    margin-left: 9px;
+  }
+}
+
+.sub_info h4 {
+  padding: 4em 2em;
+  text-align: center;
+  background-color: #fff;
 }
 
 .mic_button {
@@ -292,10 +341,11 @@ button {
 
 .chat_content {
   position: absolute;
-    top: 70px;
-    height: 81%;
-    width: 86%;
-    padding: 12px 4em;
+  top: 70px;
+  height: 81%;
+  width: 89%;
+  padding: 12px 4em;
+  overflow: auto;
 }
 
 .chat_content .msg {

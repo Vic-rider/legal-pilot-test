@@ -32,4 +32,8 @@ export class ChatAppComponent implements OnInit {
     });
   }
 
+  toogleToolbar(tool:any) {
+    tool.toggle()
+  }
+
 }

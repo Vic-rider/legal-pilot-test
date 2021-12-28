@@ -24,3 +24,16 @@ $my-custom-theme: mat-light-theme($my-custom-primary, $my-custom-accent, $my-cus
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: 0;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
