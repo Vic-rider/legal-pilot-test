@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-
-export class AuthGuard implements CanActivate {
+export class LogGuard implements CanActivate {
 
   _token = localStorage.getItem('pilot_Chat_token')
 
@@ -18,11 +16,11 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
       if(this._token) {
-        return true
+        this._router.navigateByUrl('/')
+        return false
       }
       else {
-        this._router.navigateByUrl('/auth')
-        return false
+        return true
       }
 
   }
