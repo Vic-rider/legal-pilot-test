@@ -63,7 +63,7 @@ export class LoginComponent implements OnInit {
 
     setTimeout(() => {
       localStorage.setItem('pilot_Chat_token', 'df486zf6.86zef86zefozef8886ef_6df')
-      this._router.navigateByUrl('/')
+      this._router.navigate(['/'])
     }, 1500);
 
   }

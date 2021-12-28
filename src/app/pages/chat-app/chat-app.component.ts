@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { BusinessChatAccountInfoComponent } from 'src/app/layouts/business-chat-account-info/business-chat-account-info.component';
 import { SecureChatInfoComponent } from 'src/app/layouts/secure-chat-info/secure-chat-info.component';
 
@@ -29,6 +30,7 @@ export class ChatAppComponent implements OnInit {
   newMsg:any
 
   constructor(
+    private _router: Router,
     public dialog: MatDialog) { }
 
   ngOnInit() {
@@ -51,6 +53,11 @@ export class ChatAppComponent implements OnInit {
 
     this.newMsg = ''
 
+  }
+
+  logout() {
+    localStorage.removeItem('pilot_Chat_token')
+    this._router.navigate(['/auth'])
   }
 
   viewMoreAboutSecureChat() {
